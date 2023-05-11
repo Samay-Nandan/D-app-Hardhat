@@ -1,0 +1,33 @@
+{
+  "name": "d-app-with-redhat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "yarn hardhat-local && yarn contract && vite",
+    "build": "yarn hardhat-goerli && yarn contract && vite build",
+    "preview": "vite preview",
+    "hardhat-local-network": "cd hardhat && yarn local-network",
+    "hardhat-local": "cd hardhat && yarn local",
+    "hardhat-goerli": "cd hardhat && yarn goerli",
+    "contract": "cp -rv hardhat/artifacts/contracts/*.sol/*.json src/abis && rm -rf src/abis/*.dbg.json"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "ethers": "^6.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.2.0"
+  }
+}

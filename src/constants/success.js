@@ -1,0 +1,1 @@
+export const WALLET_CONNECTED_SUCCESFULLY = "Wallet connected successfully";
